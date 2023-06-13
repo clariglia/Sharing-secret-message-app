@@ -1,0 +1,9 @@
+.row{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height: 90vh;
+}
+.col{
+    margin:0 !important;
+}
