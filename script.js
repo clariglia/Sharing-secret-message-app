@@ -24,6 +24,19 @@ document.querySelector("form").addEventListener("submit", (event) =>{
 
     const inputLink = document.querySelector("#inputLink")
     inputLink.value = `${window.location}#${messageEncrypted}`;
-    inputLink.select();
+
+    document.querySelector("#copy").addEventListener('click', () =>{
+        inputLink.select();
+        inputLink.setSelectionRange(0, 99999)
+        navigator.clipboard.writeText(inputLink.value);
+        document.querySelector("#copy").textContent = "Copied!"
+
+    })
+
+
+    CopyLink()
+
+
 
 })
+
